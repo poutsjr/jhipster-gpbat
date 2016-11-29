@@ -1,4 +1,5 @@
-# gpbat
+GPBAT [![Build Status](https://travis-ci.org/poutsjr/jhipster-gpbat.svg?branch=master)](https://travis-ci.org/poutsjr/jhipster-gpbat)
+===========
 
 This application was generated using JHipster 3.11.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v3.11.0](https://jhipster.github.io/documentation-archive/v3.11.0).
 
