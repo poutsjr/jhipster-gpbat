@@ -1,0 +1,49 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySimulationLabel" data-translate="gpbatApp.simulation.home.createOrEditLabel">Create or edit a Simulation</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.simulation.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.simulation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.simulation.dateSimulation" for="field_dateSimulation">Date Simulation</label>
+                <div class="input-group">
+                    <input id="field_dateSimulation" type="text" class="form-control" name="dateSimulation" uib-datepicker-popup="{{dateformat}}" ng-model="vm.simulation.dateSimulation" is-open="vm.datePickerOpenStatus.dateSimulation"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateSimulation')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.simulation.remarques" for="field_remarques">Remarques</label>
+            <input type="text" class="form-control" name="remarques" id="field_remarques"
+                    ng-model="vm.simulation.remarques"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.simulation.etat" for="field_etat">Etat</label>
+            <select class="form-control" name="etat" ng-model="vm.simulation.etat" id="field_etat">
+                <option value="BROUILLON" data-translate="gpbatApp.EtatSimulation.BROUILLON">BROUILLON</option>
+                <option value="DEVIS" data-translate="gpbatApp.EtatSimulation.DEVIS">DEVIS</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

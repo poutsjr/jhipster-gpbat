@@ -1,0 +1,26 @@
+{
+    "gpbatApp": {
+        "produitPartenaire" : {
+            "home": {
+                "title": "Produit Partenaires",
+                "createLabel": "Create a new Produit Partenaire",
+                "createOrEditLabel": "Create or edit a Produit Partenaire",
+                "search": "Search for Produit Partenaire"
+            },
+            "created": "A new Produit Partenaire is created with identifier {{ param }}",
+            "updated": "A Produit Partenaire is updated with identifier {{ param }}",
+            "deleted": "A Produit Partenaire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Produit Partenaire {{ id }}?"
+            },
+            "detail": {
+                "title": "Produit Partenaire"
+            },
+            "article": "Article",
+            "libelle": "Libelle",
+            "unite": "Unite",
+            "prix": "Prix",
+            "bordereau": "Bordereau"
+        }
+    }
+}

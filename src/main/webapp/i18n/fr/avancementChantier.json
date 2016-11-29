@@ -1,0 +1,24 @@
+{
+    "gpbatApp": {
+        "avancementChantier" : {
+            "home": {
+                "title": "AvancementChantiers",
+                "createLabel": "Créer un nouveau Avancement Chantier",
+                "createOrEditLabel": "Créer ou éditer un Avancement Chantier",
+                "search": "Recherche pour Avancement Chantier"
+            },
+            "created": "Un nouveau Avancement Chantier a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Avancement Chantier avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Avancement Chantier avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Avancement Chantier {{ id }} ?"
+            },
+            "detail": {
+                "title": "Avancement Chantier"
+            },
+            "avancementPourcentage": "Avancement Pourcentage",
+            "avancementEtat": "Avancement Etat",
+            "chantier": "Chantier"
+        }
+    }
+}

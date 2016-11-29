@@ -1,0 +1,25 @@
+{
+    "gpbatApp": {
+        "diagnosticChantier" : {
+            "home": {
+                "title": "Diagnostic Chantiers",
+                "createLabel": "Create a new Diagnostic Chantier",
+                "createOrEditLabel": "Create or edit a Diagnostic Chantier",
+                "search": "Search for Diagnostic Chantier"
+            },
+            "created": "A new Diagnostic Chantier is created with identifier {{ param }}",
+            "updated": "A Diagnostic Chantier is updated with identifier {{ param }}",
+            "deleted": "A Diagnostic Chantier is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Diagnostic Chantier {{ id }}?"
+            },
+            "detail": {
+                "title": "Diagnostic Chantier"
+            },
+            "typeDiagnostic": "Type Diagnostic",
+            "dateDiagnostic": "Date Diagnostic",
+            "referenceDiagnostic": "Reference Diagnostic",
+            "chantier": "Chantier"
+        }
+    }
+}

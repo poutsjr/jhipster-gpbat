@@ -1,0 +1,9 @@
+{
+    "gpbatApp": {
+        "EtatSimulation" : {
+            "null": "",
+            "BROUILLON": "BROUILLON",
+            "DEVIS": "DEVIS"
+        }
+    }
+}

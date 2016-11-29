@@ -1,0 +1,22 @@
+{
+    "gpbatApp": {
+        "typeCommande" : {
+            "home": {
+                "title": "TypeCommandes",
+                "createLabel": "Créer un nouveau Type Commande",
+                "createOrEditLabel": "Créer ou éditer un Type Commande",
+                "search": "Recherche pour Type Commande"
+            },
+            "created": "Un nouveau Type Commande a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Type Commande avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Type Commande avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Type Commande {{ id }} ?"
+            },
+            "detail": {
+                "title": "Type Commande"
+            },
+            "nom": "Nom"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.produitPartenaire.detail.title">Produit Partenaire</span> {{vm.produitPartenaire.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.produitPartenaire.article">Article</span></dt>
+        <dd>
+            <span>{{vm.produitPartenaire.article}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.produitPartenaire.libelle">Libelle</span></dt>
+        <dd>
+            <span>{{vm.produitPartenaire.libelle}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.produitPartenaire.unite">Unite</span></dt>
+        <dd>
+            <span data-translate="{{'gpbatApp.UniteMetrique.' + vm.produitPartenaire.unite}}">{{vm.produitPartenaire.unite}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.produitPartenaire.prix">Prix</span></dt>
+        <dd>
+            <span>{{vm.produitPartenaire.prix}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.produitPartenaire.bordereau">Bordereau</span></dt>
+        <dd>
+            <a ui-sref="bordereau-detail({id:vm.produitPartenaire.bordereauId})">{{vm.produitPartenaire.bordereauId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="produit-partenaire-detail.edit({id:vm.produitPartenaire.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

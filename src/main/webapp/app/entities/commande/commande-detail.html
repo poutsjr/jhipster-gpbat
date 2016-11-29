@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.commande.detail.title">Commande</span> {{vm.commande.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.commande.dateEdition">Date Edition</span></dt>
+        <dd>
+            <span>{{vm.commande.dateEdition | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.dateReception">Date Reception</span></dt>
+        <dd>
+            <span>{{vm.commande.dateReception | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.referenceMarche">Reference Marche</span></dt>
+        <dd>
+            <span>{{vm.commande.referenceMarche}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.montantHt">Montant Ht</span></dt>
+        <dd>
+            <span>{{vm.commande.montantHt}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.typeTva">Type Tva</span></dt>
+        <dd>
+            <span>{{vm.commande.typeTva}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.etatFacturation">Etat Facturation</span></dt>
+        <dd>
+            <span>{{vm.commande.etatFacturation}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.facture">Facture</span></dt>
+        <dd>
+            <a ui-sref="facture-detail({id:vm.commande.factureId})">{{vm.commande.factureId}}</a>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.commande">Commande</span></dt>
+        <dd>
+            <a ui-sref="commande-detail({id:vm.commande.commandeId})">{{vm.commande.commandeId}}</a>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.partenaire">Partenaire</span></dt>
+        <dd>
+            <a ui-sref="partenaire-detail({id:vm.commande.partenaireId})">{{vm.commande.partenaireId}}</a>
+        </dd>
+        <dt><span data-translate="gpbatApp.commande.typecommande">Typecommande</span></dt>
+        <dd>
+            <a ui-sref="type-commande-detail({id:vm.commande.typecommandeId})">{{vm.commande.typecommandeId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="commande-detail.edit({id:vm.commande.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

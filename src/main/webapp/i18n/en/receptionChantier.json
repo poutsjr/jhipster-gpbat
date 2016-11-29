@@ -1,0 +1,22 @@
+{
+    "gpbatApp": {
+        "receptionChantier" : {
+            "home": {
+                "title": "Reception Chantiers",
+                "createLabel": "Create a new Reception Chantier",
+                "createOrEditLabel": "Create or edit a Reception Chantier",
+                "search": "Search for Reception Chantier"
+            },
+            "created": "A new Reception Chantier is created with identifier {{ param }}",
+            "updated": "A Reception Chantier is updated with identifier {{ param }}",
+            "deleted": "A Reception Chantier is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Reception Chantier {{ id }}?"
+            },
+            "detail": {
+                "title": "Reception Chantier"
+            },
+            "dateReception": "Date Reception"
+        }
+    }
+}

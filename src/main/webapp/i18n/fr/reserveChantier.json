@@ -1,0 +1,23 @@
+{
+    "gpbatApp": {
+        "reserveChantier" : {
+            "home": {
+                "title": "ReserveChantiers",
+                "createLabel": "Créer un nouveau Reserve Chantier",
+                "createOrEditLabel": "Créer ou éditer un Reserve Chantier",
+                "search": "Recherche pour Reserve Chantier"
+            },
+            "created": "Un nouveau Reserve Chantier a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Reserve Chantier avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Reserve Chantier avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Reserve Chantier {{ id }} ?"
+            },
+            "detail": {
+                "title": "Reserve Chantier"
+            },
+            "reserves": "Reserves",
+            "chantier": "Chantier"
+        }
+    }
+}

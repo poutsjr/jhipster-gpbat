@@ -1,0 +1,10 @@
+{
+    "gpbatApp": {
+        "TypeDiagnostic" : {
+            "null": "",
+            "AMIANTE": "AMIANTE",
+            "ELECTRICITE": "ELECTRICITE",
+            "PLOMB": "PLOMB"
+        }
+    }
+}

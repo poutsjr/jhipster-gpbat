@@ -1,0 +1,94 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCommandeLabel" data-translate="gpbatApp.commande.home.createOrEditLabel">Create or edit a Commande</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.commande.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.commande.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.commande.dateEdition" for="field_dateEdition">Date Edition</label>
+                <div class="input-group">
+                    <input id="field_dateEdition" type="text" class="form-control" name="dateEdition" uib-datepicker-popup="{{dateformat}}" ng-model="vm.commande.dateEdition" is-open="vm.datePickerOpenStatus.dateEdition"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateEdition')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.commande.dateReception" for="field_dateReception">Date Reception</label>
+                <div class="input-group">
+                    <input id="field_dateReception" type="text" class="form-control" name="dateReception" uib-datepicker-popup="{{dateformat}}" ng-model="vm.commande.dateReception" is-open="vm.datePickerOpenStatus.dateReception"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateReception')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.commande.referenceMarche" for="field_referenceMarche">Reference Marche</label>
+            <input type="text" class="form-control" name="referenceMarche" id="field_referenceMarche"
+                    ng-model="vm.commande.referenceMarche"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.commande.montantHt" for="field_montantHt">Montant Ht</label>
+            <input type="number" class="form-control" name="montantHt" id="field_montantHt"
+                    ng-model="vm.commande.montantHt"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.commande.typeTva" for="field_typeTva">Type Tva</label>
+            <input type="number" class="form-control" name="typeTva" id="field_typeTva"
+                    ng-model="vm.commande.typeTva"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.commande.etatFacturation" for="field_etatFacturation">Etat Facturation</label>
+            <input type="text" class="form-control" name="etatFacturation" id="field_etatFacturation"
+                    ng-model="vm.commande.etatFacturation"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="gpbatApp.commande.facture" for="field_facture">Facture</label>
+            <select class="form-control" id="field_facture" name="facture" ng-model="vm.commande.factureId" ng-options="facture.id as facture.id for facture in vm.factures | orderBy:'id'">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="gpbatApp.commande.commande" for="field_commande">Commande</label>
+            <select class="form-control" id="field_commande" name="commande" ng-model="vm.commande.commandeId" ng-options="commande.id as commande.id for commande in vm.commandes"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="gpbatApp.commande.partenaire" for="field_partenaire">Partenaire</label>
+            <select class="form-control" id="field_partenaire" name="partenaire" ng-model="vm.commande.partenaireId" ng-options="partenaire.id as partenaire.id for partenaire in vm.partenaires"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="gpbatApp.commande.typecommande" for="field_typecommande">Typecommande</label>
+            <select class="form-control" id="field_typecommande" name="typecommande" ng-model="vm.commande.typecommandeId" ng-options="typeCommande.id as typeCommande.id for typeCommande in vm.typecommandes"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

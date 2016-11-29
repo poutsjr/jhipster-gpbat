@@ -1,0 +1,89 @@
+<div>
+    <h2 data-translate="gpbatApp.agenceClient.home.title">Agence Clients</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="agence-client.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="gpbatApp.agenceClient.home.createLabel">
+                        Create new Agence Client
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'gpbatApp.agenceClient.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nom"><span data-translate="gpbatApp.agenceClient.nom">Nom</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="secteur"><span data-translate="gpbatApp.agenceClient.secteur">Secteur</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="adresse"><span data-translate="gpbatApp.agenceClient.adresse">Adresse</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="chefAgence"><span data-translate="gpbatApp.agenceClient.chefAgence">Chef Agence</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="chefService"><span data-translate="gpbatApp.agenceClient.chefService">Chef Service</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="clientId"><span data-translate="gpbatApp.agenceClient.client">Client</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="agenceClient in vm.agenceClients track by agenceClient.id">
+                    <td><a ui-sref="agence-client-detail({id:agenceClient.id})">{{agenceClient.id}}</a></td>
+                    <td>{{agenceClient.nom}}</td>
+                    <td>{{agenceClient.secteur}}</td>
+                    <td>{{agenceClient.adresse}}</td>
+                    <td>{{agenceClient.chefAgence}}</td>
+                    <td>{{agenceClient.chefService}}</td>
+                    <td>
+                        <a ui-sref="client-detail({id:agenceClient.clientId})">{{agenceClient.clientId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="agence-client-detail({id:agenceClient.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="agence-client.edit({id:agenceClient.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="agence-client.delete({id:agenceClient.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

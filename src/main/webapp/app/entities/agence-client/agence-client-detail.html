@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.agenceClient.detail.title">Agence Client</span> {{vm.agenceClient.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.agenceClient.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.agenceClient.nom}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.agenceClient.secteur">Secteur</span></dt>
+        <dd>
+            <span>{{vm.agenceClient.secteur}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.agenceClient.adresse">Adresse</span></dt>
+        <dd>
+            <span>{{vm.agenceClient.adresse}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.agenceClient.chefAgence">Chef Agence</span></dt>
+        <dd>
+            <span>{{vm.agenceClient.chefAgence}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.agenceClient.chefService">Chef Service</span></dt>
+        <dd>
+            <span>{{vm.agenceClient.chefService}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.agenceClient.client">Client</span></dt>
+        <dd>
+            <a ui-sref="client-detail({id:vm.agenceClient.clientId})">{{vm.agenceClient.clientId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="agence-client-detail.edit({id:vm.agenceClient.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

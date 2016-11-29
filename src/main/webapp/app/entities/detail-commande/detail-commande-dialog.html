@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDetailCommandeLabel" data-translate="gpbatApp.detailCommande.home.createOrEditLabel">Create or edit a Detail Commande</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.detailCommande.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.detailCommande.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.detailCommande.quantite" for="field_quantite">Quantite</label>
+            <input type="number" class="form-control" name="quantite" id="field_quantite"
+                    ng-model="vm.detailCommande.quantite"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.detailCommande.localisation" for="field_localisation">Localisation</label>
+            <input type="text" class="form-control" name="localisation" id="field_localisation"
+                    ng-model="vm.detailCommande.localisation"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.detailCommande.ordreCommande" for="field_ordreCommande">Ordre Commande</label>
+            <input type="number" class="form-control" name="ordreCommande" id="field_ordreCommande"
+                    ng-model="vm.detailCommande.ordreCommande"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.detailCommande.libelle" for="field_libelle">Libelle</label>
+            <input type="text" class="form-control" name="libelle" id="field_libelle"
+                    ng-model="vm.detailCommande.libelle"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="gpbatApp.detailCommande.simulation" for="field_simulation">Simulation</label>
+            <select class="form-control" id="field_simulation" name="simulation" ng-model="vm.detailCommande.simulationId" ng-options="simulation.id as simulation.id for simulation in vm.simulations"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="gpbatApp.detailCommande.commande" for="field_commande">Commande</label>
+            <select class="form-control" id="field_commande" name="commande" ng-model="vm.detailCommande.commandeId" ng-options="commande.id as commande.id for commande in vm.commandes"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="gpbatApp.detailCommande.bordereau" for="field_bordereau">Bordereau</label>
+            <select class="form-control" id="field_bordereau" name="bordereau" ng-model="vm.detailCommande.bordereauId" ng-options="bordereau.id as bordereau.id for bordereau in vm.bordereaus"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

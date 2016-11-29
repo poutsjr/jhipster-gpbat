@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151142_added_entity_AgenceClient.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151143_added_entity_AvancementChantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151144_added_entity_ProduitPartenaire.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151145_added_entity_Bordereau.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151146_added_entity_Chantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151147_added_entity_Simulation.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151148_added_entity_CorpsEtat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151149_added_entity_Commande.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151150_added_entity_DiagnosticChantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151151_added_entity_TypeCommande.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151152_added_entity_Client.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151153_added_entity_Facture.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151154_added_entity_Partenaire.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151155_added_entity_Utilisateur.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151156_added_entity_ReceptionChantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151157_added_entity_ReserveChantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151158_added_entity_DetailCommande.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20161120151142_added_entity_constraints_AgenceClient.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151143_added_entity_constraints_AvancementChantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151144_added_entity_constraints_ProduitPartenaire.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151145_added_entity_constraints_Bordereau.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151146_added_entity_constraints_Chantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151149_added_entity_constraints_Commande.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151150_added_entity_constraints_DiagnosticChantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151152_added_entity_constraints_Client.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151157_added_entity_constraints_ReserveChantier.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161120151158_added_entity_constraints_DetailCommande.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

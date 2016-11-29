@@ -1,0 +1,22 @@
+{
+    "gpbatApp": {
+        "corpsEtat" : {
+            "home": {
+                "title": "Corps Etats",
+                "createLabel": "Create a new Corps Etat",
+                "createOrEditLabel": "Create or edit a Corps Etat",
+                "search": "Search for Corps Etat"
+            },
+            "created": "A new Corps Etat is created with identifier {{ param }}",
+            "updated": "A Corps Etat is updated with identifier {{ param }}",
+            "deleted": "A Corps Etat is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Corps Etat {{ id }}?"
+            },
+            "detail": {
+                "title": "Corps Etat"
+            },
+            "nom": "Nom"
+        }
+    }
+}

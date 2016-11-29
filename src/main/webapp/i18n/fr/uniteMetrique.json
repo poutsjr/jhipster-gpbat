@@ -1,0 +1,14 @@
+{
+    "gpbatApp": {
+        "UniteMetrique" : {
+            "null": "",
+            "MC": "MC",
+            "ML": "ML",
+            "UN": "UN",
+            "KG": "KG",
+            "ENS": "ENS",
+            "LOGT": "LOGT",
+            "L": "L"
+        }
+    }
+}

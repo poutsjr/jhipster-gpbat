@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.bordereau.detail.title">Bordereau</span> {{vm.bordereau.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.bordereau.article">Article</span></dt>
+        <dd>
+            <span>{{vm.bordereau.article}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.bordereau.libelle">Libelle</span></dt>
+        <dd>
+            <span>{{vm.bordereau.libelle}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.bordereau.unite">Unite</span></dt>
+        <dd>
+            <span data-translate="{{'gpbatApp.UniteMetrique.' + vm.bordereau.unite}}">{{vm.bordereau.unite}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.bordereau.prix">Prix</span></dt>
+        <dd>
+            <span>{{vm.bordereau.prix}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.bordereau.corpsEtat">Corps Etat</span></dt>
+        <dd>
+            <a ui-sref="corps-etat-detail({id:vm.bordereau.corpsEtatId})">{{vm.bordereau.corpsEtatId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bordereau-detail.edit({id:vm.bordereau.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

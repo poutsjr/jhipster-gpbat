@@ -1,0 +1,25 @@
+{
+    "gpbatApp": {
+        "simulation" : {
+            "home": {
+                "title": "Simulations",
+                "createLabel": "Create a new Simulation",
+                "createOrEditLabel": "Create or edit a Simulation",
+                "search": "Search for Simulation"
+            },
+            "created": "A new Simulation is created with identifier {{ param }}",
+            "updated": "A Simulation is updated with identifier {{ param }}",
+            "deleted": "A Simulation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Simulation {{ id }}?"
+            },
+            "detail": {
+                "title": "Simulation"
+            },
+            "dateSimulation": "Date Simulation",
+            "remarques": "Remarques",
+            "etat": "Etat",
+            "detail": "Detail"
+        }
+    }
+}

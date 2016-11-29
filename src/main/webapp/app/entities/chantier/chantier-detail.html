@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.chantier.detail.title">Chantier</span> {{vm.chantier.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.chantier.reference">Reference</span></dt>
+        <dd>
+            <span>{{vm.chantier.reference}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.chantier.adresse">Adresse</span></dt>
+        <dd>
+            <span>{{vm.chantier.adresse}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.chantier.dateDebut">Date Debut</span></dt>
+        <dd>
+            <span>{{vm.chantier.dateDebut | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.chantier.dateDemandeTravaux">Date Demande Travaux</span></dt>
+        <dd>
+            <span>{{vm.chantier.dateDemandeTravaux | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.chantier.reception">Reception</span></dt>
+        <dd>
+            <a ui-sref="reception-chantier-detail({id:vm.chantier.receptionId})">{{vm.chantier.receptionId}}</a>
+        </dd>
+        <dt><span data-translate="gpbatApp.chantier.pilote">Pilote</span></dt>
+        <dd>
+            <a ui-sref="utilisateur-detail({id:vm.chantier.piloteId})">{{vm.chantier.piloteId}}</a>
+        </dd>
+        <dt><span data-translate="gpbatApp.chantier.commande">Commande</span></dt>
+        <dd>
+            <a ui-sref="commande-detail({id:vm.chantier.commandeId})">{{vm.chantier.commandeId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="chantier-detail.edit({id:vm.chantier.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

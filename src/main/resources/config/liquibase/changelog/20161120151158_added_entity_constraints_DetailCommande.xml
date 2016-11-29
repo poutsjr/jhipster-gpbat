@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity DetailCommande.
+    -->
+    <changeSet id="20161120151158-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="simulation_id"
+                                 baseTableName="detail_commande"
+                                 constraintName="fk_detail_commande_simulation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="simulation"/>
+
+        <addForeignKeyConstraint baseColumnNames="commande_id"
+                                 baseTableName="detail_commande"
+                                 constraintName="fk_detail_commande_commande_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="commande"/>
+
+        <addForeignKeyConstraint baseColumnNames="bordereau_id"
+                                 baseTableName="detail_commande"
+                                 constraintName="fk_detail_commande_bordereau_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bordereau"/>
+
+    </changeSet>
+</databaseChangeLog>

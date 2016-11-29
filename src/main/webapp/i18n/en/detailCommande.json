@@ -1,0 +1,28 @@
+{
+    "gpbatApp": {
+        "detailCommande" : {
+            "home": {
+                "title": "Detail Commandes",
+                "createLabel": "Create a new Detail Commande",
+                "createOrEditLabel": "Create or edit a Detail Commande",
+                "search": "Search for Detail Commande"
+            },
+            "created": "A new Detail Commande is created with identifier {{ param }}",
+            "updated": "A Detail Commande is updated with identifier {{ param }}",
+            "deleted": "A Detail Commande is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Detail Commande {{ id }}?"
+            },
+            "detail": {
+                "title": "Detail Commande"
+            },
+            "quantite": "Quantite",
+            "localisation": "Localisation",
+            "ordreCommande": "Ordre Commande",
+            "libelle": "Libelle",
+            "simulation": "Simulation",
+            "commande": "Commande",
+            "bordereau": "Bordereau"
+        }
+    }
+}

@@ -1,0 +1,76 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myChantierLabel" data-translate="gpbatApp.chantier.home.createOrEditLabel">Create or edit a Chantier</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.chantier.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.chantier.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.chantier.reference" for="field_reference">Reference</label>
+            <input type="text" class="form-control" name="reference" id="field_reference"
+                    ng-model="vm.chantier.reference"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.chantier.adresse" for="field_adresse">Adresse</label>
+            <input type="text" class="form-control" name="adresse" id="field_adresse"
+                    ng-model="vm.chantier.adresse"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.chantier.dateDebut" for="field_dateDebut">Date Debut</label>
+                <div class="input-group">
+                    <input id="field_dateDebut" type="text" class="form-control" name="dateDebut" uib-datepicker-popup="{{dateformat}}" ng-model="vm.chantier.dateDebut" is-open="vm.datePickerOpenStatus.dateDebut"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateDebut')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.chantier.dateDemandeTravaux" for="field_dateDemandeTravaux">Date Demande Travaux</label>
+                <div class="input-group">
+                    <input id="field_dateDemandeTravaux" type="text" class="form-control" name="dateDemandeTravaux" uib-datepicker-popup="{{dateformat}}" ng-model="vm.chantier.dateDemandeTravaux" is-open="vm.datePickerOpenStatus.dateDemandeTravaux"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateDemandeTravaux')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="gpbatApp.chantier.reception" for="field_reception">Reception</label>
+            <select class="form-control" id="field_reception" name="reception" ng-model="vm.chantier.receptionId" ng-options="receptionChantier.id as receptionChantier.id for receptionChantier in vm.receptions | orderBy:'id'">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="gpbatApp.chantier.pilote" for="field_pilote">Pilote</label>
+            <select class="form-control" id="field_pilote" name="pilote" ng-model="vm.chantier.piloteId" ng-options="utilisateur.id as utilisateur.id for utilisateur in vm.utilisateurs"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="gpbatApp.chantier.commande" for="field_commande">Commande</label>
+            <select class="form-control" id="field_commande" name="commande" ng-model="vm.chantier.commandeId" ng-options="commande.id as commande.id for commande in vm.commandes"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

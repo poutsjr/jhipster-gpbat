@@ -1,0 +1,26 @@
+{
+    "gpbatApp": {
+        "bordereau" : {
+            "home": {
+                "title": "Bordereaus",
+                "createLabel": "Créer un nouveau Bordereau",
+                "createOrEditLabel": "Créer ou éditer un Bordereau",
+                "search": "Recherche pour Bordereau"
+            },
+            "created": "Un nouveau Bordereau a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Bordereau avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Bordereau avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Bordereau {{ id }} ?"
+            },
+            "detail": {
+                "title": "Bordereau"
+            },
+            "article": "Article",
+            "libelle": "Libelle",
+            "unite": "Unite",
+            "prix": "Prix",
+            "corpsEtat": "Corps Etat"
+        }
+    }
+}

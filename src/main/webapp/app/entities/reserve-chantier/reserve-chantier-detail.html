@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.reserveChantier.detail.title">Reserve Chantier</span> {{vm.reserveChantier.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.reserveChantier.reserves">Reserves</span></dt>
+        <dd>
+            <span>{{vm.reserveChantier.reserves}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.reserveChantier.chantier">Chantier</span></dt>
+        <dd>
+            <a ui-sref="chantier-detail({id:vm.reserveChantier.chantierId})">{{vm.reserveChantier.chantierId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="reserve-chantier-detail.edit({id:vm.reserveChantier.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

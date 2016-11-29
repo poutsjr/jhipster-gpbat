@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.diagnosticChantier.detail.title">Diagnostic Chantier</span> {{vm.diagnosticChantier.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.diagnosticChantier.typeDiagnostic">Type Diagnostic</span></dt>
+        <dd>
+            <span data-translate="{{'gpbatApp.TypeDiagnostic.' + vm.diagnosticChantier.typeDiagnostic}}">{{vm.diagnosticChantier.typeDiagnostic}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.diagnosticChantier.dateDiagnostic">Date Diagnostic</span></dt>
+        <dd>
+            <span>{{vm.diagnosticChantier.dateDiagnostic | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.diagnosticChantier.referenceDiagnostic">Reference Diagnostic</span></dt>
+        <dd>
+            <span>{{vm.diagnosticChantier.referenceDiagnostic}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.diagnosticChantier.chantier">Chantier</span></dt>
+        <dd>
+            <a ui-sref="chantier-detail({id:vm.diagnosticChantier.chantierId})">{{vm.diagnosticChantier.chantierId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="diagnostic-chantier-detail.edit({id:vm.diagnosticChantier.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

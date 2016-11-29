@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPartenaireLabel" data-translate="gpbatApp.partenaire.home.createOrEditLabel">Create or edit a Partenaire</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.partenaire.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.partenaire.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.partenaire.raisonSociale" for="field_raisonSociale">Raison Sociale</label>
+            <input type="text" class="form-control" name="raisonSociale" id="field_raisonSociale"
+                    ng-model="vm.partenaire.raisonSociale"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.partenaire.responsable" for="field_responsable">Responsable</label>
+            <input type="text" class="form-control" name="responsable" id="field_responsable"
+                    ng-model="vm.partenaire.responsable"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.partenaire.contact" for="field_contact">Contact</label>
+            <input type="text" class="form-control" name="contact" id="field_contact"
+                    ng-model="vm.partenaire.contact"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.partenaire.adresse" for="field_adresse">Adresse</label>
+            <input type="text" class="form-control" name="adresse" id="field_adresse"
+                    ng-model="vm.partenaire.adresse"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

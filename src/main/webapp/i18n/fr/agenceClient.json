@@ -1,0 +1,27 @@
+{
+    "gpbatApp": {
+        "agenceClient" : {
+            "home": {
+                "title": "AgenceClients",
+                "createLabel": "Créer un nouveau Agence Client",
+                "createOrEditLabel": "Créer ou éditer un Agence Client",
+                "search": "Recherche pour Agence Client"
+            },
+            "created": "Un nouveau Agence Client a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Agence Client avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Agence Client avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Agence Client {{ id }} ?"
+            },
+            "detail": {
+                "title": "Agence Client"
+            },
+            "nom": "Nom",
+            "secteur": "Secteur",
+            "adresse": "Adresse",
+            "chefAgence": "Chef Agence",
+            "chefService": "Chef Service",
+            "client": "Client"
+        }
+    }
+}

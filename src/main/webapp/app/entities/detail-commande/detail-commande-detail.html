@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.detailCommande.detail.title">Detail Commande</span> {{vm.detailCommande.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.detailCommande.quantite">Quantite</span></dt>
+        <dd>
+            <span>{{vm.detailCommande.quantite}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.detailCommande.localisation">Localisation</span></dt>
+        <dd>
+            <span>{{vm.detailCommande.localisation}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.detailCommande.ordreCommande">Ordre Commande</span></dt>
+        <dd>
+            <span>{{vm.detailCommande.ordreCommande}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.detailCommande.libelle">Libelle</span></dt>
+        <dd>
+            <span>{{vm.detailCommande.libelle}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.detailCommande.simulation">Simulation</span></dt>
+        <dd>
+            <a ui-sref="simulation-detail({id:vm.detailCommande.simulationId})">{{vm.detailCommande.simulationId}}</a>
+        </dd>
+        <dt><span data-translate="gpbatApp.detailCommande.commande">Commande</span></dt>
+        <dd>
+            <a ui-sref="commande-detail({id:vm.detailCommande.commandeId})">{{vm.detailCommande.commandeId}}</a>
+        </dd>
+        <dt><span data-translate="gpbatApp.detailCommande.bordereau">Bordereau</span></dt>
+        <dd>
+            <a ui-sref="bordereau-detail({id:vm.detailCommande.bordereauId})">{{vm.detailCommande.bordereauId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="detail-commande-detail.edit({id:vm.detailCommande.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

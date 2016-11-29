@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         name="CM1"
+         updateCheck="false"
+         maxBytesLocalHeap="16M">
+
+    <!--
+      This is a default configuration, it is re-configured by the CacheConfiguration Spring Bean, using the
+      properties from the resources/config/*.yml files.
+    -->
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            eternal="false"
+            overflowToDisk="false"
+            />
+
+    <cache name="fr.kearis.gpbat.admin.domain.User"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Authority"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.User.authorities"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.PersistentToken"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.User.persistentTokens"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.AgenceClient"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.AvancementChantier"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.ProduitPartenaire"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Bordereau"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Chantier"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Chantier.avancements"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Chantier.reserves"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Chantier.clients"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Chantier.diagnostics"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Simulation"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Simulation.details"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.CorpsEtat"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Commande"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Commande.details"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Commande.chantiers"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Commande.references"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.DiagnosticChantier"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.TypeCommande"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Client"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Client.agences"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Facture"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Partenaire"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.Utilisateur"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.ReceptionChantier"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.ReserveChantier"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="fr.kearis.gpbat.admin.domain.DetailCommande"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <!-- jhipster-needle-ehcache-add-entry -->
+</ehcache>

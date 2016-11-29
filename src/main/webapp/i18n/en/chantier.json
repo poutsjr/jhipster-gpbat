@@ -1,0 +1,32 @@
+{
+    "gpbatApp": {
+        "chantier" : {
+            "home": {
+                "title": "Chantiers",
+                "createLabel": "Create a new Chantier",
+                "createOrEditLabel": "Create or edit a Chantier",
+                "search": "Search for Chantier"
+            },
+            "created": "A new Chantier is created with identifier {{ param }}",
+            "updated": "A Chantier is updated with identifier {{ param }}",
+            "deleted": "A Chantier is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Chantier {{ id }}?"
+            },
+            "detail": {
+                "title": "Chantier"
+            },
+            "reference": "Reference",
+            "adresse": "Adresse",
+            "dateDebut": "Date Debut",
+            "dateDemandeTravaux": "Date Demande Travaux",
+            "reception": "Reception",
+            "avancement": "Avancement",
+            "reserve": "Reserve",
+            "client": "Client",
+            "diagnostic": "Diagnostic",
+            "pilote": "Pilote",
+            "commande": "Commande"
+        }
+    }
+}

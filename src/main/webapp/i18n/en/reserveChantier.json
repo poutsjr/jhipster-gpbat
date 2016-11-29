@@ -1,0 +1,23 @@
+{
+    "gpbatApp": {
+        "reserveChantier" : {
+            "home": {
+                "title": "Reserve Chantiers",
+                "createLabel": "Create a new Reserve Chantier",
+                "createOrEditLabel": "Create or edit a Reserve Chantier",
+                "search": "Search for Reserve Chantier"
+            },
+            "created": "A new Reserve Chantier is created with identifier {{ param }}",
+            "updated": "A Reserve Chantier is updated with identifier {{ param }}",
+            "deleted": "A Reserve Chantier is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Reserve Chantier {{ id }}?"
+            },
+            "detail": {
+                "title": "Reserve Chantier"
+            },
+            "reserves": "Reserves",
+            "chantier": "Chantier"
+        }
+    }
+}

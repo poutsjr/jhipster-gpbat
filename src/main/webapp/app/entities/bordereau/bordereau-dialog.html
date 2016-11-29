@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBordereauLabel" data-translate="gpbatApp.bordereau.home.createOrEditLabel">Create or edit a Bordereau</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bordereau.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bordereau.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.bordereau.article" for="field_article">Article</label>
+            <input type="text" class="form-control" name="article" id="field_article"
+                    ng-model="vm.bordereau.article"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.bordereau.libelle" for="field_libelle">Libelle</label>
+            <input type="text" class="form-control" name="libelle" id="field_libelle"
+                    ng-model="vm.bordereau.libelle"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.bordereau.unite" for="field_unite">Unite</label>
+            <select class="form-control" name="unite" ng-model="vm.bordereau.unite" id="field_unite">
+                <option value="MC" data-translate="gpbatApp.UniteMetrique.MC">MC</option>
+                <option value="ML" data-translate="gpbatApp.UniteMetrique.ML">ML</option>
+                <option value="UN" data-translate="gpbatApp.UniteMetrique.UN">UN</option>
+                <option value="KG" data-translate="gpbatApp.UniteMetrique.KG">KG</option>
+                <option value="ENS" data-translate="gpbatApp.UniteMetrique.ENS">ENS</option>
+                <option value="LOGT" data-translate="gpbatApp.UniteMetrique.LOGT">LOGT</option>
+                <option value="L" data-translate="gpbatApp.UniteMetrique.L">L</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="gpbatApp.bordereau.prix" for="field_prix">Prix</label>
+            <input type="number" class="form-control" name="prix" id="field_prix"
+                    ng-model="vm.bordereau.prix"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="gpbatApp.bordereau.corpsEtat" for="field_corpsEtat">Corps Etat</label>
+            <select class="form-control" id="field_corpsEtat" name="corpsEtat" ng-model="vm.bordereau.corpsEtatId" ng-options="corpsEtat.id as corpsEtat.id for corpsEtat in vm.corpsetats"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

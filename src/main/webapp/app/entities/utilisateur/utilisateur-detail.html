@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="gpbatApp.utilisateur.detail.title">Utilisateur</span> {{vm.utilisateur.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="gpbatApp.utilisateur.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.nom}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.utilisateur.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.prenom}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.utilisateur.telephone">Telephone</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.telephone}}</span>
+        </dd>
+        <dt><span data-translate="gpbatApp.utilisateur.agence">Agence</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.agence}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="utilisateur-detail.edit({id:vm.utilisateur.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
